@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Kalkulator</title>
+        <script language="JavaScript" type="text/javascript">
+            function kalkulator() {
+
+                var pertama = parseInt(document.getElementById("pertama").value);
+                var kedua = parseInt(document.getElementById("kedua").value);
+                var op = document.getElementById("op").value;
+                var hasil = document.getElementById("hasil");
+                var total;
+            
+                if (isNaN(pertama) || isNaN(kedua)) {
+                    alert('isi form dengan angka!')
+            
+                } else {
+            
+                    if (op == "tambah") {
+                        total = pertama + kedua;
+                    } else if (op == "kurang") {
+                        total = pertama - kedua;
+                    } else if (op == "kali") {
+                        total = pertama * kedua;
+                    } else {
+                        total = pertama / kedua;
+                    }
+                }
+            
+                hasil.value = total;
+            }
+        </script>
+    </head>
+    <body>
+        <h4>Kalkulator</h4>
+        <input type=”text” id=”pertama”>
+        <select id=”op”>
+            <option value=”tambah”>+</option>
+            <option value=”kurang”>-</option>
+            <option value=”kali”>x</option>
+            <option value=”bagi”>/</option>
+        </select>
+        <input type=”text” id=”kedua”>
+        <input type="submit" onclick="kalkulator()" value="=">
+        <input type=”text” id=”hasil”>
+    </body>
+</html>

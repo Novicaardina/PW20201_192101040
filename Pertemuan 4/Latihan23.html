@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>teks jalan</title>
+        <script>
+            function TeksJalan(){
+                var teks = "Welcome my elearning "
+                var pjteks = teks.length
+                var ambil1 = teks.substr(0,pjteks-1)
+                var ambil2 = teks.substr(0,1)
+                teks = ambil1 + ambil2
+                Window.Status = "test";
+                //Window.SetTimeOut(TeksJalan(),200)
+            }
+        </script>
+    </head>
+    <body onload="TeksJalan()">
+    </body>
+</html>
